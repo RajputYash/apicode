@@ -25,13 +25,9 @@ SECRET_KEY = 'xd92%$hc(nfxplhs&ink+uw-yb+hj5r)8!@c#!k&acpm$2hvt6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','192.168.1.18']
+ALLOWED_HOSTS = []
 
-EMAIL_USE_TLS = True
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_HOST_USER = "no.reply@aviconn.in"
-EMAIL_HOST_PASSWORD = "Aviconn#123"
-EMAIL_PORT = 587
+
 
 
 CORS_ORIGIN_ALLOW_ALL = True
