@@ -2,15 +2,16 @@ from django.contrib import admin
 from .models import User,Customer,Consumption,Resident,Room,OTP
 
 class UserAdmin(admin.ModelAdmin):
-    search_fields = ('id','username','UserType')
-    list_display = ['id','username','UserType']
+    search_fields = ('id', 'username', 'UserType')
+    list_display = ['id', 'username', 'UserType']
     ordering = ('id',)
 
 
 class CustomerAdmin(admin.ModelAdmin):
     search_fields = ('id', 'Username')
-    list_display = ['id', 'Username', 'Email', 'Contact_no', 'Address' , 'Created_date']
+    list_display = ['id', 'Username', 'Email', 'Contact_no', 'Address', 'Created_date']
     ordering = ('id',)
+    exclude = ('Password',)
 
 
 class RoomAdmin(admin.ModelAdmin):

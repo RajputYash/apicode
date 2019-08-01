@@ -34,7 +34,7 @@ class Customer(models.Model):
     Name = models.CharField(max_length=20)
     Username = models.CharField(max_length=20, unique=True, verbose_name=u"Please Enter your Unique Username",
                                 help_text=u"Please do not select white spaces", default='test123')
-    Password = models.CharField(max_length=15, default="Pass123")
+    Password = models.CharField(max_length=15, default="password123")
     Created_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True,
                                    limit_choices_to={'UserType': 1, 'is_active': True})
     Total_Property = models.PositiveIntegerField(default=0)
@@ -120,7 +120,7 @@ class Resident(models.Model):
         return self.Name
 
 class OTP(models.Model):
-    otp = models.CharField(blank=True, null=True, max_length=200)
+    otp = models.CharField(blank=True, null=True, max_length=5)
     user_id = models.PositiveIntegerField(default=0)
     created = models.DateTimeField(auto_now=False, auto_now_add=True)
 
